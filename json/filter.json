@@ -1,0 +1,62 @@
+{
+    "insert": {
+        "and": [
+            {
+                "property": "完成",
+                "checkbox": {
+                    "does_not_equal": true
+                }
+            },
+            {
+                "property": "狀態",
+                "select": {
+                    "equals": "進行中"
+                }
+            },
+            {
+                "property": "calendarID",
+                "rich_text": {
+                    "is_empty": true
+                }
+            }
+        ]
+    },
+    "update": {
+        "and": [
+            {
+                "property": "完成",
+                "checkbox": {
+                    "does_not_equal": true
+                }
+            },
+            {
+                "property": "狀態",
+                "select": {
+                    "equals": "進行中"
+                }
+            },
+            {
+                "timestamp": "last_edited_time",
+                "last_edited_time": {
+                "on_or_after": "today"
+                }
+            }
+        ]
+    },
+    "delete": {
+        "and": [
+            {
+                "property": "完成",
+                "checkbox": {
+                    "does_not_equal": true
+                }
+            },
+            {
+                "property": "狀態",
+                "select": {
+                    "equals": "進行中"
+                }
+            }
+        ]
+    }
+}
